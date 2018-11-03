@@ -65,13 +65,19 @@ include 'helper/connection.php';
                             // $row is the iterator
                             // nama_barang, harga_barang, and jml_barang is array key,
                             // They are the coloums names in table tb_barang
+
+                            // store the id
+                            $id_barang = $row["id_barang"];
                             echo "
                             <tr>
                                 <td>" . $index++ . "</td>
                                 <td>" .$row["nama_barang"]. "</td>
                                 <td>" .$row["harga_barang"]. "</td>
                                 <td>" .$row["jml_barang"]. "</td>
-                                <td>Action Button</td>
+                                <td>
+                                    <a href='formEditBarang.php?id=$id_barang' class='btn btn-warning'>Update</a>
+                                    <a href='process/actionDeleteBarang.php?id=$id_barang' class='btn btn-danger'>Delete</a>
+                                </td>
                             </tr>
                             ";
                         }
