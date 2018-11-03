@@ -13,7 +13,7 @@ $query = "UPDATE tb_barang
     SET nama_barang = '$namaBarang', harga_barang = '$hargaBarang', jml_barang = '$jumlah'
     WHERE id_barang = $idBarang";
 
-// Do insert query
+// Do update query
 if (mysqli_query($con, $query)) {
     header("Location:../index.php");
 } else {

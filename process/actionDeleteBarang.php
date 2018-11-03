@@ -11,7 +11,7 @@ $idBarang = $_GET["id"];
 // The better one is soft delete. We just need a "flag" for each data
 $query = "DELETE FROM tb_barang WHERE id_barang = $idBarang";
 
-// Do insert query
+// Do delete query
 if (mysqli_query($con, $query)) {
     header("Location:../index.php");
 } else {
